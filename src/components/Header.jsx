@@ -7,6 +7,7 @@ const Header = () => (
       <img src={Cart} alt='logo' className='h-9'/>
       <h1 className='text-3xl font-bold'>Shopping Cart</h1>
     </div>
+    <NavBar/>
   </header>
 )
 
