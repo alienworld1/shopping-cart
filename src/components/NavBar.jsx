@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const NavLink = ({link, text}) => (
-  <Link
-    className="hover:underline hover:decoration-violet-800"
-    to={link}>
+  <Link className="link" to={link}>
       {text}
   </Link>
 )

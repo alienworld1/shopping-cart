@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'mall': "url('/src/assets/mostafa-meraji-X0yKdR_F9rM-unsplash.jpg')",
+      }
+    },
   },
   plugins: [],
 }
