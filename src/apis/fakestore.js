@@ -9,10 +9,11 @@ const fetchItems = async number => {
 }
 
 const useFakeItem = id => {
+  const [item, setItem] = useState();
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    const [item, setItem] = useState();
-    const [error, setError] = useState();
-    const [loading, setLoading] = useState(true);
   
     const fetchFakeItem = async () => {
       try {
@@ -26,7 +27,7 @@ const useFakeItem = id => {
     }
     
     fetchFakeItem();
-  }, [])
+  }, [id,])
 
   return {item, error, loading};
 }
