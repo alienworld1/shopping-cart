@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const fetchItems = async number => {
-  const response = await fetch(`https://fakestoreapi.com/products?limit=${number}`);
+const fetchItemById = async number => {
+  const response = await fetch(`https://fakestoreapi.com/products/${number}`);
   if (!response.ok) {
     throw new Error('Server Error');
   }
@@ -17,7 +17,7 @@ const useFakeItem = id => {
   
     const fetchFakeItem = async () => {
       try {
-        const fakeItem = await fetchItems(id);
+        const fakeItem = await fetchItemById(id);
         setItem(fakeItem);
       } catch (error) {
         setError(error);
@@ -27,9 +27,9 @@ const useFakeItem = id => {
     }
     
     fetchFakeItem();
-  }, [id,])
+  }, [id])
 
   return {item, error, loading};
 }
 
-export { fetchItems, useFakeItem };
+export { fetchItemById as fetchItems, useFakeItem };
