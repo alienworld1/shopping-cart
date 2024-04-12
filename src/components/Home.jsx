@@ -6,7 +6,7 @@ const Home = () => (
       <h1 className="text-4xl font-bold text-slate-100">The one place where you can get anything!</h1>
       <p className="text-lg text-zinc-50">This is a mock shopping cart created using tailwind CSS and React</p>
     </div>
-    <Link to='/' className="bg-violet-700 text-violet-50 p-3 text-xl rounded-md hover:bg-violet-500 active:bg-violet-800">Shop Now!</Link>
+    <Link to='shop' className="bg-violet-700 text-violet-50 p-3 text-xl rounded-md hover:bg-violet-500 active:bg-violet-800">Shop Now!</Link>
   </main>
 );
 
