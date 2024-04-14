@@ -16,5 +16,5 @@ export default function App({page}) {
 }
 
 App.propTypes = {
-  page: PropTypes.string,
+  page: PropTypes.oneOf(['home', 'shop', 'page']),
 };
