@@ -17,7 +17,7 @@ const NavBar = () => (
     <ul className="flex text-xl items-center h-full gap-8">
     <NavLink link='/' text='Home'/>
     <NavLink link='shop' text='Shop'/>
-    <NavLink link='/' text='Cart'/>
+    <NavLink link='cart' text='Cart'/>
     </ul>
   </nav>
 );
