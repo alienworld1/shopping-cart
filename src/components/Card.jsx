@@ -11,7 +11,7 @@ const ProductInfo = ({product}) => {
 
   return (
     <>
-      <img src={product.image} alt={product.title}/>
+      <img className='h-60' src={product.image} alt={product.title}/>
       <h2 className='font-bold mt-2'>{product.title}</h2>
       <section className='mt-2 flex justify-between'>
         <span className='capitalize'>{product.category}</span>
@@ -55,9 +55,9 @@ ProductInfo.propTypes = {
 const Card = ({id}) => {
   const { item, error, loading } = useFakeItem(id);
   return (
-    <div className='p-4 shadow-lg max-w-96'>
+    <div className='p-4 shadow-lg w-96 min-h-96 mx-auto bg-violet-50 rounded-md my-4'>
       {loading? 
-        <TailSpin stroke="#6d28d9"/> :
+        <TailSpin stroke="#6d28d9" className='self-center'/> :
         error ? <div className='text-red-600'>
           <Icon path={mdiAlertCircle} size={1} className='inline'/>
           <span className='pl-3'>Sorry, there was an error fetching this product.</span>
