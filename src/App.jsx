@@ -10,11 +10,11 @@ export default function App({page}) {
     <div className="flex flex-col h-screen">
       <Header/>
       {page === 'home'? <Home/> : page === 'shop' ? <Shop/> : <Cart/>}
-      <Footer/>
+      {page !== 'shop' && <Footer/>}
     </div>
   );
 }
 
 App.propTypes = {
-  page: PropTypes.oneOf(['home', 'shop', 'page']),
+  page: PropTypes.oneOf(['home', 'shop', 'cart']),
 };

@@ -1,4 +1,5 @@
 const cart = new Map();
+const productIdMap = new Map();
 
 const incrementProduct = id => {
   if (!cart.has(id)) {
@@ -20,4 +21,9 @@ const getCountOfProduct = id => (
   cart.has(id) ? cart.get(id) : 0
 )
 
-export { incrementProduct, decrementProduct, checkIfPossibleToDecrement, getCountOfProduct};
+const cartInfo = {
+  size: () => cart.size,
+  products: () => cart.entries(),
+}
+
+export { incrementProduct, decrementProduct, checkIfPossibleToDecrement, getCountOfProduct, cartInfo, productIdMap};
