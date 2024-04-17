@@ -1,11 +1,12 @@
 const cart = new Map();
 const productIdMap = new Map();
 
-const incrementProduct = id => {
-  if (!cart.has(id)) {
-    cart.set(id, 1);
+const incrementProduct = product => {
+  if (!cart.has(product.id)) {
+    cart.set(product.id, 1);
+    productIdMap.set(product.id, product);
   } else {
-    cart.set(id, cart.get(id) + 1);
+    cart.set(product.id, cart.get(product.id) + 1);
   }
 };
 
@@ -23,7 +24,8 @@ const getCountOfProduct = id => (
 
 const cartInfo = {
   size: () => cart.size,
-  products: () => cart.entries(),
+  products: () => Array.from(cart.entries()),
+  productFromId: id => productIdMap.get(id),
 }
 
 export { incrementProduct, decrementProduct, checkIfPossibleToDecrement, getCountOfProduct, cartInfo, productIdMap};
