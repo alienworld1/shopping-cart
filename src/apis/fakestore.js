@@ -39,4 +39,4 @@ const useFakeItem = id => {
   return {item, error, loading};
 }
 
-export { useFakeItem };
+export { useFakeItem, fetchItemById };

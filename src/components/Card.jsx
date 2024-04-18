@@ -21,13 +21,13 @@ const ProductInfo = ({product}) => {
         {count === 0 ? 
         <button className='p-2 mt-2 bg-violet-800 text-violet-50 rounded-lg hover:bg-violet-600 active:bg-violet-900'
           onClick={() => {
-            incrementProduct(product.id);
+            incrementProduct(product);
             setCount(1);
         }}>Add to cart</button> :
         <div>
           <button className='mt-2 bg-violet-800 text-violet-50 rounded-full hover:bg-violet-600 active:bg-violet-900 font-bold text-center py-2 px-4'
             onClick={() => {
-              incrementProduct(product.id);
+              incrementProduct(product);
               setCount(count + 1);
             }}>+</button>
           <span className='font-bold mx-2'>{count}</span>
